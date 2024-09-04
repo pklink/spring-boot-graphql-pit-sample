@@ -1,0 +1,6 @@
+query ($id: ID!) {
+    breed(id: $id) {
+        id
+        name
+    }
+}

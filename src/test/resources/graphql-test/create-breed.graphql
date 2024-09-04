@@ -1,0 +1,6 @@
+mutation {
+    createBreed(input: { name: "Labrador" }) {
+        id
+        name
+    }
+}
