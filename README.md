@@ -1,4 +1,4 @@
-# Sample: Spring Boot & GraphQL
+# Sample: Spring Boot, GraphQL & PIT
 
 Sample application using Spring Boot and GraphQL
 
@@ -10,6 +10,7 @@ Sample application using Spring Boot and GraphQL
   * Mutations
   * Schema mapping
   * HTTP testing
+* PIT (mutation testing)
 
 ### Todo
 
@@ -20,7 +21,7 @@ Sample application using Spring Boot and GraphQL
 * https://docs.spring.io/spring-boot/index.html
 * https://docs.spring.io/spring-graphql/reference/index.html
 * https://graphql.org/learn/
-
+* https://pitest.org/
 
 ## GraphQL
 
@@ -41,5 +42,13 @@ For more details check the [`schema.graphqls`](./src/main/resources/graphql/sche
 ## Build & run
 
 ```shell
-mvn clean install spring-boot:run
+mvn clean compile spring-boot:run
 ```
+
+## Testing
+
+```shell
+mvn clean test-compile org.pitest:pitest-maven:mutationCoverage
+```
+
+The *Pit Test Coverage Report* will be stored under `./target/pit-reports/net.einself.graphql`

@@ -39,12 +39,12 @@ class BreedControllerTest {
     @Test
     void breed() {
         tester.documentName("breed")
-                .variable("id", 1L)
+                .variable("id", 2L)
                 .execute()
                 .path("data.breed")
                 .entity(Breed.class)
-                .matches(breed -> Objects.equals(breed.id(), 1L))
-                .matches(breed -> Objects.equals(breed.name(), "Poodle"));
+                .matches(breed -> Objects.equals(breed.id(), 2L))
+                .matches(breed -> Objects.equals(breed.name(), "Rottweiler"));
     }
 
     @Test
